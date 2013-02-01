@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  to: MyString
+  from: MyString
+  message: MyString
+  received: false
+
+two:
+  to: MyString
+  from: MyString
+  message: MyString
+  received: false

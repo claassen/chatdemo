@@ -49,7 +49,11 @@
 	height: 20px;
 	bottom: 0px;
 	left: 0px;
-	right: 0px;
+	#right: 0px;
+	width: 300px;
+	padding: 0px;
+	border: none;
+	border-top: thin solid black;
 }
 
 #chat[data-state='minimized'] #message {

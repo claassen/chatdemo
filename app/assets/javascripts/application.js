@@ -29,9 +29,8 @@ $(function(){
 		//Do the AJAX post
 		$.post($("#chatForm").attr("action"), $("#chatForm").serialize(), function(data) {
 			var message = $("#message").val();
-			var currentUser = $("#currentUser").val();
 			$("#message").val("");
-			$("#chatText").append("<b>" + currentUser + "</b> " + message + "<br />");
+			$("#chatText").append("<b>You:</b> " + message + "<br />");
 		});
 
 		//Important. Stop the normal POST
@@ -44,7 +43,7 @@ $(function(){
 	  		for(var i=0; i<data.length; i++) {
 	  			var message = data[i].message;
 	  			var from = data[i].from;
-	  			$("#chatText").append("<b>" + from + "</b> " + message + "<br />");
+	  			$("#chatText").append("<b>" + from + ":</b> " + message + "<br />");
 	  		}
 		}, "json");
 	}, 1000);

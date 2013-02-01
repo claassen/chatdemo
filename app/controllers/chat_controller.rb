@@ -1,12 +1,11 @@
 class ChatController < ApplicationController
   def sendmessage
     text = params[:message]
-    sender = params[:userEmail]
     receiver = params[:to]
 
     message = Message.new
     message.to = receiver
-    message.from = sender
+    message.from = current_user.email
     message.message = text
     message.received = false
 
@@ -27,5 +26,7 @@ class ChatController < ApplicationController
     respond_to do |format|
       format.json { render :json => messages }
     end
+
+    
   end
 end

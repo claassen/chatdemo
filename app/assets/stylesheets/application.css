@@ -11,6 +11,12 @@
  *= require_self
  *= require_tree .
  */
+#chat, #message {
+	transition: all 1s;
+	-moz-transition: all 1s; /* Firefox 4 */
+	-webkit-transition: all 1s; /* Safari and Chrome */
+	-o-transition: all 1s; /* Opera */
+}
 
 #chat {
 	position: fixed;
@@ -49,7 +55,6 @@
 	height: 20px;
 	bottom: 0px;
 	left: 0px;
-	#right: 0px;
 	width: 300px;
 	padding: 0px;
 	border: none;
@@ -57,12 +62,14 @@
 }
 
 #chat[data-state='minimized'] #message {
-	display: none;
+	#display: none;
+	bottom: -20px;
 }
 
 #toList {
 	position: absolute;
 	left: 0px;
 	right: 0px;
+	width: 300px;
 	top: 20px;
 }
